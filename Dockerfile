@@ -6,8 +6,8 @@ RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' |
 RUN apt-get update -yqqq && \
     apt-get install -y google-chrome-stable xvfb
 
-RUN Xvfb :99 -ac & && \
-    export DISPLAY=:99
+RUN Xvfb :99 -ac &
+RUN export DISPLAY=:99
 
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
