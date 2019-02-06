@@ -6,7 +6,8 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
 RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list
 
 RUN apt-get update -yqqq && \
-    apt-get install -y google-chrome-stable xvfb
+    apt-get install -y google-chrome-stable xvfb firefox-esr
+
 
 RUN Xvfb :99 -ac &
 RUN export DISPLAY=:99
