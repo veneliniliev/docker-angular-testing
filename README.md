@@ -7,6 +7,7 @@ Docker image for angular testing with **protractor** / **karma** / **jasmine** i
 - Xvfb (X virtual framebuffer / display server) 
 - NodeJS / NPM
 - Selenium / webdriver-manager
+- RSync (for deployment to development or production server)
 
 ## Browsers
 

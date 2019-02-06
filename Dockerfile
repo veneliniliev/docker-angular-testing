@@ -8,7 +8,7 @@ RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' |
 
 # Install packages
 RUN apt-get update -yqqq && \
-    apt-get install -y google-chrome-stable xvfb firefox-esr
+    apt-get install -y google-chrome-stable xvfb firefox-esr rsync
 
 # Install Selenium / webdriver-manager & update
 RUN npm install -g webdriver-manager && \
