@@ -33,4 +33,5 @@ RUN echo 'PACKAGE VERSIONS:' && \
     echo '-- firefox version:' && \
     firefox --version && \
     echo '-- selenium/webdriver-manager version:' && \
-    webdriver-manager version
+    webdriver-manager version  && \
+    webdriver-manager status
