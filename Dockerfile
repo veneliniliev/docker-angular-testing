@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:lts
 
 MAINTAINER Venelin Iliev "venelin@provision.bg"
 
@@ -8,7 +8,10 @@ RUN echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' |
 
 # Install packages
 RUN apt-get update -yqqq && \
-    apt-get install -y google-chrome-stable xvfb firefox-esr rsync
+    apt-get install -y google-chrome-stable xvfb firefox-esr \
+    # Cypress dependencies
+    libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth
+
 
 # Install Selenium / webdriver-manager & update
 RUN npm install -g webdriver-manager && \
